@@ -15,7 +15,7 @@ class _MyLoginState extends State<MyLogin> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Inicio de sesion'),
+        title: const Text('Inicio de sesión'),
       ),
       body: Form(
         key: _formKey,
@@ -46,7 +46,7 @@ class _MyLoginState extends State<MyLogin> {
               decoration: const InputDecoration(
                 labelText: 'Ingresa tu Contraseña',
               ),
-              obscureText: true, // Para ocultar la contraseña
+              obscureText: true,
             ),
             const SizedBox(height: 20.0),
             Row(
@@ -60,16 +60,14 @@ class _MyLoginState extends State<MyLogin> {
             );
                 },
                 icon: const Icon(Icons.app_registration),
-                label: const Text('Registrarte'),
+                label: const Text('Crear cuenta'),
               ),
               const SizedBox(height: 20.0,width: 20.0,),
             ElevatedButton.icon(
               onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                  // If the form is valid, display a snackbar. In the real world,
-                  // you'd often call a server or save the information in a database.
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Processing Data')),
+                    const SnackBar(content: Text('Procesando información')),
                   );
                    Navigator.push(
                   context,
